@@ -1,0 +1,9 @@
+import app from "../../app.js";
+
+const port = process.env.PORT || 9000; 
+console.log("PORT", port);
+
+// 3. Ejecutar el servidor
+app.listen(port, () => {
+  console.log("We are connected to IronHorse on port", port);
+});
