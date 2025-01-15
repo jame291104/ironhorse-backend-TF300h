@@ -47,4 +47,23 @@ describe('Pruebas de controladores de users IH', () => {
         })
     })
 
+    //2.2 Defino bloque de preuba para GET
+    describe('Prueba GET /usuarios', () => {
+
+        //primer caso de prueba: debería indicar que no hay usuarios almacenados
+        it('Debería indicar que no hay usuarios almacenados', async () => {
+            const res = await supertest(app).get('/usuarios/obtener')
+            
+            console.log(res.statusCode);
+            
+            expect(res.statusCode).toBe(200)
+            expect(res.body).toHaveProperty('mensaje', 'No hay usuarios almacenados')
+
+        })
+
+        // Si van a probar que funcione la peticion get teniendo usuarios almacenados
+        //await new userModel(testUser).save()
+
+    });
+
 })
