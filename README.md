@@ -20,7 +20,6 @@ Se utiliza una base de datos en memoria para las pruebas de integración con Mon
 *   [Mongoose](https://mongoosejs.com/): ODM (Object Data Modeling) para MongoDB.
 *   [Jest](https://jestjs.io/): Framework de pruebas de JavaScript.
 *   [Supertest](https://github.com/visionmedia/supertest): Librería para probar solicitudes HTTP.
-*   [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server): Para simular una instancia de MongoDB en memoria durante las pruebas.
 
 ## Instalación
 
