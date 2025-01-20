@@ -15,15 +15,15 @@ const adminRouter = express.Router();
 adminRouter.post("/crear",  createAdmin);
 
 // Ruta para obtener todos los administradores
-adminRouter.get("/obtener", authMiddleware("superadmin"), getAllAdmins);
+adminRouter.get("/obtener", getAllAdmins);
 
 // Ruta para obtener un administrador por su ID
-adminRouter.get("/obtener/:id", authMiddleware("superadmin"), getAdminById);
+adminRouter.get("/obtener/:id", getAdminById);
 
 // Ruta para actualizar un administrador
-adminRouter.put("/actualizar/:id", authMiddleware("superadmin"), updateAdmin);
+adminRouter.put("/actualizar/:id", updateAdmin);
 
 // Ruta para eliminar un administrador
-adminRouter.delete("/eliminar/:id", authMiddleware("superadmin"), deleteAdmin);
+adminRouter.delete("/eliminar/:id", deleteAdmin);
 
 export default adminRouter;
